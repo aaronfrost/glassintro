@@ -2,8 +2,8 @@ var OAuth = require('google-oauth');
 console.log("___________________", process.env.client_id);
 console.log("___________________", process.env.client_secret);
 var oauth = new OAuth.OAuth2(
-  'asdf',                      //client_id
-  'asdfasdf',                  //client_secret
+  process.env.client_id,                      //client_id
+  process.env.client_secret,                  //client_secret
   'http://fierce-sierra-2412.herokuapp.com/auth'//redirecturl, point back to this route on your public hosted server
 );
 
