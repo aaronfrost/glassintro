@@ -8,5 +8,8 @@
 <body>
   <h1>Welcome to {{title}}</h1>
   <a href="/auth">OAuth with Google</a>
+  {{#if access_token}}
+  <h3>Here is the access token: {{access_token}}</h3>
+  {{/if}}
 </body>
 </html>

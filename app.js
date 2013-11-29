@@ -39,8 +39,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', require('./routes/index'));
+app.get('/', require('./routes'));
 app.get('/test', require('./routes/test'));
+app.get('/auth', require('./routes/auth'));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
