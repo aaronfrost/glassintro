@@ -15,7 +15,6 @@ module.exports = function(req, res){
     oauth.getGoogleAuthorizeTokenURL(
       [
         'https://www.googleapis.com/auth/glass.timeline',
-        'https://www.googleapis.com/auth/glass.location',
         'https://www.googleapis.com/auth/userinfo.profile'
       ],
       function(err, redirecUrl) {

@@ -11,9 +11,11 @@ module.exports = {
     //https://developers.google.com/glass/v1/reference/timeline/insert
 
     var token = req.session.access_token ||'ya29.AHES6ZQf3cD570cqVM0pBTKnywAnZRHGEmz1a19p8BCtgt5hldiKPA';
-    console.log(req.body);
     var message = {
-      text: req.body.message
+      title: req.body.title,
+      text: req.body.message,
+      html: req.body.html,
+      speakableText: req.body.message
     }
     var options = {
       headers:{
@@ -30,7 +32,6 @@ module.exports = {
       }
     }).on('success', function(data, response){
       console.log('success post');
-        res.end();
     }).on('fail', function(data, response){
       console.log('failed post', data.error.errors);
     }).on('error', function(err, response){
