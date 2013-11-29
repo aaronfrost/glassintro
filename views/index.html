@@ -7,9 +7,10 @@
 </head>
 <body>
   <h1>Welcome to {{title}}</h1>
-  <a href="/auth">OAuth with Google</a>
   {{#if access_token}}
-  <h3>Here is the access token: {{access_token}}</h3>
+    <h3><a href="/send1">Send something to Glass</a></h3>
+  {{else}}
+    <a href="/auth">OAuth with Google</a>
   {{/if}}
 </body>
 </html>
