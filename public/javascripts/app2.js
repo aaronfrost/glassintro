@@ -5,9 +5,7 @@ angular.module('myapp').controller('SendCtrl', function($scope, $http){
   $scope.message = "";
 
   $scope.sendToGlass = function(){
-    $http.post('/send1', {
-      message:$scope.message
-      })
+    $http.post('/send2', {message:$scope.message})
       .success(function(){
         $scope.sent = true;
         setTimeout(function(){

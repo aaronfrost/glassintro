@@ -44,6 +44,9 @@ app.get('/test', require('./routes/test'));
 app.get('/auth', require('./routes/auth'));
 app.get('/send1', require('./routes/send1').get);
 app.post('/send1', require('./routes/send1').post);
+app.get('/send2', require('./routes/send2').get);
+app.post('/send2', require('./routes/send2').post);
+app.post('/send2callback', require('./routes/send2callback'));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

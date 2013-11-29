@@ -3,17 +3,20 @@ var mirrorurl = 'https://www.googleapis.com/mirror/v1/timeline';
 
 module.exports = {
   get: function(req, res){
-    res.render('send1', {title: 'Send1'});
+    res.render('send2', {title: 'Send2'});
   },
   post: function(req, res){
-     console.log("\n\n POSTING \n\n");
+
     //here is what the post.request needs to look like
     //https://developers.google.com/glass/v1/reference/timeline/insert
 
     var token = req.session.access_token ||'ya29.AHES6ZQf3cD570cqVM0pBTKnywAnZRHGEmz1a19p8BCtgt5hldiKPA';
-    console.log(req.body);
     var message = {
-      text: req.body.message
+      text: req.body.message,
+      menuItems:[
+        {action: 'REPLY'}
+      ],
+      callbackUrl: 'http://fast-forest-8131.herokuapp.com/send2callback'
     }
     var options = {
       headers:{
@@ -30,7 +33,6 @@ module.exports = {
       }
     }).on('success', function(data, response){
       console.log('success post');
-        res.end();
     }).on('fail', function(data, response){
       console.log('failed post', data.error.errors);
     }).on('error', function(err, response){

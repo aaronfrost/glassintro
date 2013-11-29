@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Glass Demo - Send1</title>
+  <title>Glass Demo - Send2</title>
   <script src="http://code.angularjs.org/1.0.7/angular.min.js"></script>
   <script src="http://code.angularjs.org/1.0.7/angular-resource.min.js"></script>
-  <script type="text/javascript" src="javascripts/app.js"></script>
+  <script type="text/javascript" src="javascripts/app2.js"></script>
 </head>
 <body>
   <h1>Welcome to {{title}}</h1>
   <fieldset ng-app="myapp">
     <p ng-controller="SendCtrl">
-      <input name="text" id="text" placeholder="Enter TEXT here..." ng-model="message"/>
-      <!--<input name="text" id="title" placeholder="Enter TITLE here..." ng-model="title"/>-->
-      <!--<input name="text" id="html" placeholder="Enter HTML here..." ng-model="html"/>-->
+      <input name="text" id="text" placeholder="Enter text here..." ng-model="message"/>
       <input type="button" id="send" value="Send to Glass" ng-click="sendToGlass()"/>
       <span ng-show="sent" style="background-color:green;">Message Sent Successfully</span>
     </p>

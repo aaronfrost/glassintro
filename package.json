@@ -9,7 +9,10 @@
     "express": "3.2.5",
     "handlebars": "~1.0.11",
     "google-oauth": "0.0.2",
-    "restler": "~2.0.1"
+    "restler": "~2.0.1",
+    "googleapis": "~0.2.12-alpha",
+    "readline": "0.0.1",
+    "querystring": "~0.2.0"
   },
   "engines": {
     "node": "0.10.x",
